@@ -11,9 +11,9 @@ jobs:
         run:  sudo apt-get update
       - name: Run test script
         run:  ./test.sh
-        if: always()
       - name: Archive results
+        if: always()
         uses: actions/upload-artifact@v2
         with:
           name: log-file
-          path: /home/runner/work/test.log
+          path: /home/runner/work/GitHub-Tests/GitHub-Tests
