@@ -10,7 +10,6 @@ jobs:
       - name: Check for updates
         run:  sudo apt-get update
       - name: Run test script
-        uses: actions/upload-artifact@v2
         run:  ./test.sh
         if: always()
       - name: Archive results
