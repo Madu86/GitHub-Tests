@@ -5,6 +5,7 @@ on: [push,pull_request]
 jobs:
   test-run:
     runs-on: ubuntu-20.04
+    if: always()
     steps:
       - uses: actions/checkout@v2
       - name: Check for updates
