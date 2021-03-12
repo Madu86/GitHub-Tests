@@ -2,4 +2,4 @@
 
 echo "CI test" > test.log
 
-exit 1
+exit 0
