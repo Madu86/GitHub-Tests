@@ -5,13 +5,14 @@ on: [push,pull_request]
 jobs:
   test-run:
     runs-on: ubuntu-20.04
-    if: always()
     steps:
       - uses: actions/checkout@v2
       - name: Check for updates
         run:  sudo apt-get update
       - name: Run test script
+        uses: actions/upload-artifact@v2
         run:  ./test.sh
+        if: always()
       - name: Archive results
         uses: actions/upload-artifact@v2
         with:
